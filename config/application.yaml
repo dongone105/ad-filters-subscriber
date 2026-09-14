@@ -43,6 +43,10 @@ adfs:
       path: https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt
       type: adblock
       dialect: adguard
+
+    - name: local-list
+      path: inputs/mylist.txt
+      type: dns
       
 
   # 所有输出使用全部输入源；同一格式可输出多个文件，但路径不得重复或冲突。
