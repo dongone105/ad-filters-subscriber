@@ -4,8 +4,16 @@ adfs:
   # 名称必须唯一；name、path、type 均为必填字段。
   # 格式：adblock、dns、hosts、dnsmasq、smartdns、mihomo、sing-box。
   input:
+    - name: 217heidai-adblockfilters
+      path: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
+      type: dns
+
     - name: anti-AD
       path: https://anti-ad.net/easylist.txt
+      type: dns
+
+    - name: anti-AD-plus_blocklist
+      path: https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt
       type: dns
 
     - name: Halflife
@@ -43,6 +51,14 @@ adfs:
       path: https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt
       type: adblock
       dialect: adguard
+
+    - name: hyper_adrules_ads_adguard
+      path: https://github.com/Lynricsy/HyperADRules/releases/latest/download/hyper_adrules_ads_adguard.txt
+      type: dns
+
+    - name: hyper_adrules_malware_adguard
+      path: https://github.com/Lynricsy/HyperADRules/releases/latest/download/hyper_adrules_malware_adguard.txt
+      type: dns
 
     - name: local-list
       path: inputs/mylist.txt
