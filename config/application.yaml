@@ -44,9 +44,6 @@ adfs:
       type: adblock
       dialect: adguard
       
-    - name: local-hosts
-      path: inputs/hosts.txt
-      type: hosts
 
   # 所有输出使用全部输入源；同一格式可输出多个文件，但路径不得重复或冲突。
   # name 为输出目录内的相对文件路径；type 必填。
