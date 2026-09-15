@@ -71,7 +71,7 @@ adfs:
   # 模板只填写正文，程序自动逐行添加注释前缀；JSON 不继承模板，显式设置非空模板会报错。
   output:
   
-    - name: DnsbBolck.txt
+    - name: DnsbBlock.txt
       type: dns
       dialect: adguard  # DNS 仅支持 adguard，也是默认方言。
       action-filter: block
@@ -79,7 +79,7 @@ adfs:
     - name: DnsAllow.txt
       type: dns
       dialect: adguard  # DNS 仅支持 adguard，也是默认方言。
-      action-filter: block
+      action-filter: allow
    
 
   # 以下运行选项均可省略，所示数值为默认值。
