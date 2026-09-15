@@ -25,7 +25,7 @@ adfs:
     - name: DD-AD
       path: https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/release/easylist.txt
       type: adblock
-      dialect: adguard
+      dialect: ubo
 
     - name: qy-Ads-Rule
       path: https://raw.githubusercontent.com/rssvcn/qy-Ads-Rule/main/black.txt
@@ -66,7 +66,8 @@ adfs:
 
     - name: 喵二黑名单
       path: https://raw.githubusercontent.com/miaoermua/AdguardFilter/main/rule.txt
-      type: dns
+      type: adblock
+      dialect: adguard
 
     - name: local-list
       path: inputs/mylist.txt
