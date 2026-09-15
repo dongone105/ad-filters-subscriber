@@ -25,6 +25,7 @@ public final class OutputProperties {
     private String dialect;
     private String container;
     private String fileHeader;
+    private String actionFilter;
 
     public OutputProperties(@Parameter int index) {
         this.index = index;
