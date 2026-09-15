@@ -391,7 +391,7 @@ public final class BasicRuleWriter implements RuleWriter {
         if (finished) {
             return FinishResult.EMPTY;
         }
-        if (target.type() == RuleType.DNS) {
+        if (target.type() == RuleType.DNS && target.actionFilter() != RuleAction.BLOCK) {
             for (DomainName domain : whitelist) {
                 String exception = "@@||" + domain.value() + "^";
                 byte[] record = exception.getBytes(StandardCharsets.UTF_8);
