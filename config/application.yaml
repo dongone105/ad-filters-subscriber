@@ -10,8 +10,7 @@ adfs:
 
     - name: anti-AD
       path: https://anti-ad.net/easylist.txt
-      type: adblock
-      dialect: adguard
+      type: dns
 
     - name: anti-AD-plus_blocklist
       path: https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt
