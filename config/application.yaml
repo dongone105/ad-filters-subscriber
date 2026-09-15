@@ -20,7 +20,7 @@ adfs:
     - name: Halflife
       path: https://cdn.jsdelivr.net/gh/sbwml/halflife-list@master/ad.txt
       type: adblock
-      dialect: abp  # Adblock 方言：core（默认）、abp、adguard、ubo。
+      dialect: ubo  # Adblock 方言：core（默认）、abp、adguard、ubo。
 
     - name: DD-AD
       path: https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/release/dns.txt
