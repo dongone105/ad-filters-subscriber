@@ -23,7 +23,7 @@ adfs:
       dialect: ubo  # Adblock 方言：core（默认）、abp、adguard、ubo。
 
     - name: DD-AD
-      path: https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/release/dns.txt
+      path: https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/release/easylist.txt
       type: adblock
       dialect: adguard
 
@@ -37,8 +37,9 @@ adfs:
       type: hosts
 
     - name: 那个谁520规则
-      path: https://raw.githubusercontent.com/qq5460168/666/master/dns.txt
-      type: dns
+      path: https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/rules.txt
+      type: adblock
+      dialect: adguard
 
     - name: TTDNS
       path: https://raw.githubusercontent.com/TTDNS/Cat/refs/heads/main/DNS.TXT
@@ -63,8 +64,8 @@ adfs:
       path: https://github.com/Lynricsy/HyperADRules/releases/latest/download/hyper_adrules_malware_adguard.txt
       type: dns
 
-    - name: '喵二黑名单'
-      path: 'https://raw.githubusercontent.com/miaoermua/AdguardFilter/main/rule.txt'
+    - name: 喵二黑名单
+      path: https://raw.githubusercontent.com/miaoermua/AdguardFilter/main/rule.txt
       type: dns
 
     - name: local-list
@@ -100,7 +101,8 @@ adfs:
 
     - name: 'hyper_adrules_allow_adguard'
       path: 'https://github.com/Lynricsy/HyperADRules/releases/latest/download/hyper_adrules_allow_adguard.txt'
-      type: dns
+      type: adblock
+      dialect: adguard
       
 
   # 所有输出使用全部输入源；同一格式可输出多个文件，但路径不得重复或冲突。
