@@ -24,7 +24,8 @@ adfs:
 
     - name: DD-AD
       path: https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/release/dns.txt
-      type: dns
+      type: adblock
+      dialect: adguard
 
     - name: qy-Ads-Rule
       path: https://raw.githubusercontent.com/rssvcn/qy-Ads-Rule/main/black.txt
@@ -41,7 +42,8 @@ adfs:
 
     - name: TTDNS
       path: https://raw.githubusercontent.com/TTDNS/Cat/refs/heads/main/DNS.TXT
-      type: dns
+      type: adblock
+      dialect: adguard
 
     - name: 茯苓广告规则
       path: https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
@@ -160,9 +162,9 @@ adfs:
       allow-reduction: true  # 是否允许转换缩小匹配范围。
 
     dns:
-      enabled: false  # 启用后对可提取确定域名的规则进行 DNS 验证。
-      strict-mode: false  # 启用后只检测语义严格为精确域名的规则，关闭时，对形式如 ||example.com^ 的规则也将启用检测
-      servers: []  # 留空使用系统 DNS；支持 IP 或 IP:端口，IPv6 使用方括号。
+      enabled: true  # 启用后对可提取确定域名的规则进行 DNS 验证。
+      strict-mode: true  # 启用后只检测语义严格为精确域名的规则，关闭时，对形式如 ||example.com^ 的规则也将启用检测
+      servers: [8.8.8.8, 119.29.29.29,223.5.5.5]  # 留空使用系统 DNS；支持 IP 或 IP:端口，IPv6 使用方括号。
       concurrency: 64
       timeout: 3s
       retries: 1
