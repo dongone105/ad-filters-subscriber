@@ -7,6 +7,7 @@ import dev.fordes.adfs.config.InputSpec.SourceLocation;
 import dev.fordes.adfs.error.ConfigurationException;
 import dev.fordes.adfs.error.RuleProcessingException;
 import dev.fordes.adfs.rule.model.DomainName;
+import dev.fordes.adfs.rule.model.RuleAction;
 import jakarta.inject.Singleton;
 import lombok.RequiredArgsConstructor;
 
