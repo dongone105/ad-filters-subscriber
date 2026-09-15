@@ -6,6 +6,7 @@ import java.util.List;
 import dev.fordes.adfs.config.OutputSpec;
 import dev.fordes.adfs.rule.dedup.CanonicalStore;
 import dev.fordes.adfs.rule.dedup.OutputDeduplicator;
+import dev.fordes.adfs.rule.model.RuleActions;
 import dev.fordes.adfs.rule.model.RuleEntry;
 
 public final class OutputTarget implements AutoCloseable {
@@ -28,6 +29,9 @@ public final class OutputTarget implements AutoCloseable {
     }
 
     public WriteResult write(RuleEntry entry) {
+        if (spec.actionFilter() != null && RuleActions.of(entry) != spec.actionFilter()) {
+            return WriteResult.UNSUPPORTED;
+        }
         return writer.write(entry);
     }
 
