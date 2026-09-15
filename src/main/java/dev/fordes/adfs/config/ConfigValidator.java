@@ -167,7 +167,21 @@ public final class ConfigValidator {
             fileHeader = "";
         }
         FileHeaderTemplate.validate(fileHeader, field);
-        return new OutputSpec(relative, type, dialect, container, fileHeader.isBlank() ? "" : fileHeader);
+        RuleAction actionFilter = resolveActionFilter(properties.getActionFilter(), properties.getIndex());
+        return new OutputSpec(relative, type, dialect, container, fileHeader.isBlank() ? "" : fileHeader, actionFilter);
+    }
+
+    private static RuleAction resolveActionFilter(String configured, int index) {
+        if (configured == null || configured.isBlank()) {
+            return null;
+        }
+        String normalized = configured.strip().toLowerCase(Locale.ROOT);
+        return switch (normalized) {
+            case "block" -> RuleAction.BLOCK;
+            case "allow" -> RuleAction.ALLOW;
+            default -> throw new ConfigurationException(
+                    "adfs.output[" + index + "].action-filter 仅支持 block 或 allow: " + configured);
+        };
     }
 
     private static RuleDialect resolveDialect(RuleType type, String configured) {
