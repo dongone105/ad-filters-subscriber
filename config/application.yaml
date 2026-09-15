@@ -10,7 +10,8 @@ adfs:
 
     - name: anti-AD
       path: https://anti-ad.net/easylist.txt
-      type: dns
+      type: adblock
+      dialect: adguard
 
     - name: anti-AD-plus_blocklist
       path: https://raw.githubusercontent.com/mphin/adguardhome_rules/main/Blacklist.txt
@@ -20,7 +21,7 @@ adfs:
     - name: Halflife
       path: https://cdn.jsdelivr.net/gh/sbwml/halflife-list@master/ad.txt
       type: adblock
-      dialect: adguard  # Adblock 方言：core（默认）、abp、adguard、ubo。
+      dialect: abp  # Adblock 方言：core（默认）、abp、adguard、ubo。
 
     - name: DD-AD
       path: https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/release/dns.txt
