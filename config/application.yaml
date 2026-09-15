@@ -87,10 +87,6 @@ adfs:
       type: adblock
       dialect: adguard
 
-    - name: 'xlxbk-allow-rule'
-      path: 'https://oss.xlxbk.cn/allow.txt'
-      type: dns
-
     - name: 'hyper_adrules_allow_adguard'
       path: 'https://github.com/Lynricsy/HyperADRules/releases/latest/download/hyper_adrules_allow_adguard.txt'
       type: dns
